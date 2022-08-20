@@ -32,16 +32,16 @@ async def response(message: types.Message):
     if authorized: 
 
         if message.text.lower() == "shutdown":  #command for shutdown pc
-                try:
-                    os.system("shutdown /p")
-                except:
-                    await message.reply("error during process")
+            try:
+                os.system("shutdown /p")
+            except:
+                await message.reply("error during process")
             
         elif message.text.lower() == "reboot":  #command for reboot pc
-                try:
-                    os.system("shutdown /r")
-                except:
-                    await message.reply("error during process")
+            try:
+                os.system("shutdown /r")
+            except:
+                await message.reply("error during process")
 
         elif message.text.lower() == "disconnect":  #command for disconnect pc
             try:
